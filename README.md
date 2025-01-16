@@ -1,5 +1,5 @@
 ### Pas encore fonctionnel
-    Lors de la suppression, il faut actualiser la page pour accèder aux publications
+    Après mise en place de l'invalidation du cache Redis, le cache est bien supprimé mais il faut actualiser la page pour accèder aux autres publications
 # archiNTier-Indivi
     FrontEnd en ReactJS
     Gateway
