@@ -13,15 +13,15 @@ exports.getAllPublications = async (_, res) => {
                 },
             });
         }
-        const publication = await Publication.find();
+        const publications = await Publication.find();
 
-        await cache.setCache("publication", publication, { EX: 300 });
+        await cache.setCache("publication", publications, { EX: 10 });
 
         res.status(200).json({
             status: "success",
-            results: publication.length,
+            results: publications.length,
             data: {
-                publication,
+                publications,
             },
         });
     } catch (err) {
@@ -56,9 +56,6 @@ exports.createPublication = async (req, res) => {
             ...req.body,
             userId: user,
         });
-
-        // Invalidate cache after creating a new product
-        await cache.delCache("publication");
 
         res.status(201).json({
             status: "succes",
