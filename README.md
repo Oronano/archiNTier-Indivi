@@ -1,3 +1,5 @@
+### Pas encore fonctionnel
+    Lors de la suppression, il faut actualiser la page pour accèder aux publications
 # archiNTier-Indivi
     FrontEnd en ReactJS
     Gateway
