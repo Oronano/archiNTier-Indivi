@@ -1,16 +1,22 @@
 # archiNTier-Indivi
+
     FrontEnd en ReactJS
     Gateway
     Service Publication & Service User
     Redis Cache
 
 ## serviceUser
+
     PORT 8080
 
 ## servicePublication
+
     PORT 8081
+
 ## gateway
+
     PORT 3001
+
 # Endpoints publications
 
     GET /api/publications
@@ -20,6 +26,7 @@
     DELETE /api/publications/:id
 
     Exemple DEL : http://localhost:3001/api/publications/6788d6c1955e63bfb266c071
+
 # Endpoints users
 
     login GET api/users/login

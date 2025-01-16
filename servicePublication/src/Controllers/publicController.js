@@ -58,7 +58,7 @@ exports.createPublication = async (req, res) => {
         });
 
         // Invalidate cache after creating a new product
-        await cache.delCache("products");
+        await cache.delCache("publication");
 
         res.status(201).json({
             status: "succes",
@@ -80,7 +80,7 @@ exports.deletePublication = async (req, res) => {
         await Publication.findByIdAndDelete(req.params.id);
 
         // Invalidate cache after creating a new product
-        await cache.delCache("products");
+        await cache.delCache("publication");
 
         res.status(200).json({
             status: "success",
@@ -107,7 +107,7 @@ exports.updatePublication = async (req, res) => {
         );
 
         // Invalidate cache after creating a new product
-        await cache.delCache("products");
+        await cache.delCache("publication");
 
         res.status(200).json({
             status: "success",
