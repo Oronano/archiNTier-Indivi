@@ -17,6 +17,10 @@
 
     PORT 3001
 
+## REDIS
+
+    Durée du cache 10s
+
 # Endpoints publications
 
     GET /api/publications
@@ -32,4 +36,4 @@
     login GET api/users/login
     POST api/users
 
-    Exemple Login : http://localhost:8080/api/users/login
+    Exemple Login : http://localhost:3001/api/users/login
